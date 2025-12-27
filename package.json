@@ -1,6 +1,6 @@
 {
   "name": "@creativoma/create-stack",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Interactive CLI to scaffold your perfect project stack",
   "type": "module",
   "bin": {
