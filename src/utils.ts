@@ -68,8 +68,8 @@ export async function checkPrerequisites(packageManager: PackageManager): Promis
   // Check Node.js version
   const nodeVersion = process.version;
   const majorVersion = parseInt(nodeVersion.slice(1).split('.')[0] ?? '0', 10);
-  if (majorVersion < 18) {
-    issues.push(`Node.js 18+ required (found ${nodeVersion})`);
+  if (majorVersion < 22) {
+    issues.push(`Node.js 22+ required (found ${nodeVersion})`);
   }
 
   // Check if selected package manager is available

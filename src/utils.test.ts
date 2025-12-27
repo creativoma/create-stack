@@ -197,6 +197,25 @@ describe('checkPrerequisites', () => {
     const issues = await checkPrerequisites('npm');
     expect(issues).toContain('git is not installed (required for git init)');
   });
+
+  it('should detect old Node.js version', async () => {
+    const originalVersion = process.version;
+    Object.defineProperty(process, 'version', {
+      value: 'v16.0.0',
+      configurable: true
+    });
+
+    const { execa } = await import('execa');
+    vi.mocked(execa).mockResolvedValue({} as never);
+
+    const issues = await checkPrerequisites('npm');
+    expect(issues).toContain('Node.js 22+ required (found v16.0.0)');
+
+    Object.defineProperty(process, 'version', {
+      value: originalVersion,
+      configurable: true
+    });
+  });
 });
 
 describe('printPrerequisiteWarnings', () => {
