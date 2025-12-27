@@ -1,37 +1,19 @@
 {
   "name": "@creativoma/create-stack",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Interactive CLI to scaffold your perfect project stack",
   "type": "module",
-  "bin": {
-    "create-stack": "./dist/index.js"
+  "author": {
+    "name": "creativoma"
   },
-  "files": [
-    "dist"
-  ],
+  "license": "MIT",
+  "homepage": "https://github.com/creativoma/create-stack#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/creativoma/create-stack.git"
   },
   "bugs": {
     "url": "https://github.com/creativoma/create-stack/issues"
-  },
-  "homepage": "https://github.com/creativoma/create-stack#readme",
-  "engines": {
-    "node": ">=18"
-  },
-  "scripts": {
-    "dev": "tsc && node dist/index.js",
-    "build": "tsc",
-    "prepublishOnly": "pnpm run build",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\"",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "cli",
@@ -52,12 +34,30 @@
     "starter",
     "template"
   ],
-  "author": {
-    "name": "creativoma"
+  "engines": {
+    "node": ">=22"
   },
-  "license": "MIT",
+  "bin": {
+    "create-stack": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc && node dist/index.js",
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "execa": "^8.0.1",
@@ -65,7 +65,8 @@
     "gradient-string": "^2.0.2",
     "ora": "^7.0.1",
     "picocolors": "^1.1.1",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
