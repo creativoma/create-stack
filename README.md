@@ -24,20 +24,26 @@
 
 ## Quick Start
 
+Choose your preferred package manager:
+
 ```bash
+# npm
 npx @creativoma/create-stack
-```
-```bash
+
+# pnpm
 pnpm dlx @creativoma/create-stack
 
+# yarn
 yarn dlx @creativoma/create-stack
 
+# bun
 bunx @creativoma/create-stack
 
+# deno
 deno run -A npm:@creativoma/create-stack
 ```
 
-**Requirements:** Node.js 22+
+> **Requirements:** Node.js 22+
 
 ## Why create-stack?
 

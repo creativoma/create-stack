@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-12-27
+
+### Fixed
+
+- **Package Size Optimization**: Reduced package size by ~60% (from 350kB to ~140kB)
+  - Excluded test files (`*.test.ts`) from production build
+  - Disabled source maps in production build (`sourceMap: false`)
+  - Disabled declaration maps in production build (`declarationMap: false`)
+  - Created separate `tsconfig.build.json` for production builds
+  - Test files and source maps are still generated during development
+
+### Changed
+
+- Build process now uses `tsconfig.build.json` for production builds
+- Development workflow unchanged - all maps and tests still available in dev
+
 ## [1.0.0] - 2025-12-27
 
 ### Major Release - Professional Architecture Overhaul

@@ -1,6 +1,6 @@
 {
   "name": "@creativoma/create-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interactive CLI to scaffold your perfect project stack",
   "type": "module",
   "author": {
@@ -48,7 +48,7 @@
   },
   "scripts": {
     "dev": "tsc && node dist/index.js",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "pnpm run build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
